@@ -1,0 +1,28 @@
+<script>
+var userArray = [
+{ firstName: 'test', lastName: 'test' },
+{ firstName: 'test1', lastName: 'test2' },
+{ firstName: 'test3', lastName: 'test4' },
+];
+
+
+newUserArray = userArray.map(rec => {
+  return {
+    'Last_Name': rec.lastName,
+    'First_Name': rec.firstName,  
+     }
+  })
+console.log('newUserArray',newUserArray);
+
+
+const newArrayOfObj = userArray.map(({
+    firstName: First_Name,
+    lastName: Last_Name
+}) => ({
+    First_Name,
+    Last_Name
+}));
+
+console.log('newArrayOfObj',newArrayOfObj);
+
+</script>
